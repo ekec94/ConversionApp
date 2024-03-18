@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/idTitle"
+        android:layout_width="378dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/txtTitle"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idCurrencyInput"
+        android:layout_width="345dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/txtHint"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitle" />
+
+    <RadioGroup
+        android:id="@+id/idRBGroup"
+        android:layout_width="345dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCurrencyInput">
+
+        <RadioButton
+            android:id="@+id/idRBusd2euro"
+            android:layout_width="325dp"
+            android:layout_height="83dp"
+            android:checked="true"
+            android:text="@string/txtUSD2Euro"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/idRBeuro2usd"
+            android:layout_width="327dp"
+            android:layout_height="82dp"
+            android:text="@string/txtEuro2USD"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/idResult"
+        android:layout_width="347dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idRBGroup" />
+
+    <Button
+        android:id="@+id/idBtnConvert"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/txtButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idResult" />
+</androidx.constraintlayout.widget.ConstraintLayout>
